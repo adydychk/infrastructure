@@ -37,7 +37,7 @@ REPOSITORIES = {
     # open source product configs
     'product-configs': 'https://github.com/Intel-Media-SDK/product-configs.git',
     # open source media-driver
-    'media-driver': 'https://github.com/intel/media-driver.git',
+    'media-driver': 'https://github.com/VCDP/media-driver.git',
     # open source gmmlib
     'gmmlib': 'https://github.com/intel/gmmlib.git',
     # open source opencl_runtime
