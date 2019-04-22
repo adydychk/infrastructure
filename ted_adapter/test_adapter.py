@@ -185,7 +185,8 @@ class TedAdapter(object):
         _orig_copystat = shutil.copystat
         shutil.copystat = lambda x, y, follow_symlinks=True: x
         shutil.copytree(self.test_results_dir, self.tests_artifacts_dir, ignore=shutil.ignore_patterns('bin'))
-        shutil.copyfile(LOG_PATH, str(self.tests_artifacts_dir / LOG_NAME))
+        # Disable copying asg-hevc logs
+        #shutil.copyfile(LOG_PATH, str(self.tests_artifacts_dir / LOG_NAME))
         shutil.copyfile(str(self.test_adapter_log_dir / self.test_adapter_log_name),
                         str(self.root_dir / self.test_adapter_log_name))
         shutil.copystat = _orig_copystat
