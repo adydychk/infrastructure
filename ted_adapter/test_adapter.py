@@ -293,13 +293,13 @@ def main():
         print("Exception occurred:\n", traceback.format_exc())
         # TODO return json string
         tests_return_code = TestReturnCodes.INFRASTRUCTURE_ERROR.value
-
-    try:
-        tests_return_code |= adapter.run_fei_tests()
-    except Exception:
-        print("Exception occurred:\n", traceback.format_exc())
-        # TODO return json string
-        tests_return_code |= TestReturnCodes.INFRASTRUCTURE_ERROR.value
+    # Ags-hevc does not built for this branch
+    #try:
+    #    tests_return_code |= adapter.run_fei_tests()
+    #except Exception:
+    #    print("Exception occurred:\n", traceback.format_exc())
+    #    # TODO return json string
+    #    tests_return_code |= TestReturnCodes.INFRASTRUCTURE_ERROR.value
 
     try:
         adapter.copy_logs_to_share()
