@@ -52,6 +52,7 @@ class ErrorCode(Enum):
     CRITICAL = 1
 
 
+
 class TestReturnCodes(Enum):
     """
     Container for tests return codes
