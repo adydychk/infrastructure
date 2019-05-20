@@ -681,3 +681,11 @@ def create_file(file_path, data):
     """
 
     pathlib.Path(file_path).write_text(data, encoding='utf-8')
+
+def create_folder(folder_path):
+    """
+    Create folder
+    :param folder_path: path to folder
+    :type: String
+    """
+    pathlib.Path(folder_path).mkdir(parents=True, exist_ok=True)
