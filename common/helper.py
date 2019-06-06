@@ -638,8 +638,8 @@ def cmd_exec(cmd, env=None, cwd=None, shell=True, log=None, verbose=True, hide=N
             cwd = str(pathlib.Path.cwd())
             log_out(f'working directory: {cwd}')
 
-        if env:
-            log_out(f'environment: {env}')
+#         if env:
+#             log_out(f'environment: {env}')
 
     try:
         completed_process = subprocess.run(cmd,
